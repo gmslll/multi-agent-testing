@@ -1,0 +1,45 @@
+server:
+  host: 0.0.0.0
+  port: 8081
+  mode: debug # debug/release
+
+models:
+  openai:
+    api_key: xxx
+    base_url: xxx
+    timeout: 60s
+    enabled: true
+  deepseek:
+    api_key: xxx
+    base_url: https://api.deepseek.com/beta
+    timeout: 60s
+    enabled: true
+  minimax:
+    api_key: xxx
+    base_url: https://api.minimaxi.com/v1
+    timeout: 60s
+    enabled: true
+  zhipu:
+    api_key: xxx
+    base_url: https://open.bigmodel.cn/api/paas/v4
+    timeout: 60s
+    enabled: true
+
+database:
+  type: mysql
+  host: localhost
+  port: 3306
+  username: root
+  password: 123456
+  database: multi_agent_test
+  charset: utf8mb4
+  parseTime: true
+  loc: Local
+  maxIdleConns: 10
+  maxOpenConns: 100
+
+log:
+  level: info
+  format: json
+  output: stdout
+  file: logs/app.log
